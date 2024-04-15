@@ -13,7 +13,7 @@ Implement a web app with the following:
    - status
    - content.output (if defined) with code blocks and newlines rendered properly
 
-Use Chakra UI components where suitable. Let me know if you need any clarification or have additional questions!
+Use Shadcn UI components where suitable. Let me know if you need any clarification or have additional questions!
 
 ## Collaborate with GPT Engineer
 
