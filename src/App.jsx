@@ -18,7 +18,7 @@ function App() {
       const json = JSON.parse(e.target.result);
       setJsonData(json);
 
-      const ids = [...new Set(json.data.map((item) => item.id.split("/")[0]))];
+      const ids = [...new Set(Object.values(json.data).map((item) => item.id.split("/")[0]))];
       setProjectIds(ids);
     };
 
@@ -29,7 +29,7 @@ function App() {
     setSelectedProject(value);
 
     if (value) {
-      const filtered = jsonData.data.filter((item) => item.id.startsWith(`${value}/`));
+      const filtered = Object.values(jsonData.data).filter((item) => item.id.startsWith(`${value}/`));
       const sorted = filtered.sort((a, b) => new Date(b.created_at.__time__) - new Date(a.created_at.__time__));
       setFilteredEdits(sorted);
     } else {
